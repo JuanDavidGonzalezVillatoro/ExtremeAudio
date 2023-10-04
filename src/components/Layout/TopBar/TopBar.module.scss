@@ -1,0 +1,109 @@
+.topBar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    z-index: 5;
+    //transition: 0.3s ease transform;
+  }
+
+  @media screen and (max-width: 1090px){
+    .topBar{
+      position: absolute;
+      top: 0px;
+      left: 0;
+      //background: $background-quaternary__blur;
+      //display: inline-block;
+      flex-direction: column;
+      //width: 100%;
+      //height: -webkit-fill-available;
+      //transform: translateX(-100%);
+      transition: 0.3s ease all;
+      //padding: center;
+      border-radius: 0px 0 0 0px;
+      // //width: 100%;
+      // display: inline-block;
+      // justify-content: center;
+    }
+    .topBar.center.open{
+      background-color: yellow;
+    }
+    .nav_toggle.open{
+      transform: translateX(0) !important;
+    }
+    .nav_toggle{
+      align-items: end;
+      display: flex !important;
+      flex-direction: column;
+      margin: 15 px;
+    }
+    
+    .nav_toggle span{
+      width: 30px;
+      height: 4px;
+      background: white;
+      margin-bottom: 5px;
+      border-radius: 2px;
+      transform-origin: 5px 0px;
+      transition: all 0.2s linear;
+    }
+
+    .nav_toggle.open > span {
+      transform: rotate(45deg) translate(0px, 0px);
+    }
+
+    .nav_toggle.open > span:nth-child(2) {
+      display: none;
+    }
+
+    .nav_toggle.open > span:nth-child(3){
+      transform: rotate(-45deg) translate(-5px, 1px);
+    }
+
+    .open{
+      transform: translateX(-200%);
+      //overflow: hidden !important;
+      //visibility: hidden;
+      //z-index: 6;
+    }
+
+  }
+  
+  .left {
+    width: 20%;
+
+    @media screen and (max-width: 1090px) {
+      width: 70%;
+    }
+  
+    img {
+      height: 65px;
+
+      @media screen and (max-width: 1090px) {
+        height: 50px;
+      }
+    }
+  }
+
+  .center {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .right {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 1090px) {
+      width: 50%;
+      display:inline-table;
+      justify-content: flex-end;
+    }
+  
+
+  }
+
